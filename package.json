@@ -1,0 +1,20 @@
+{
+    "name": "weather-forecast-bot",
+    "version": "1.0.0",
+    "description": "weather-forecast-bot ",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "cli": "node --no-warnings app.mjs",
+        "start": "node app.mjs"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "module",
+    "dependencies": {
+        "axios": "^1.6.2",
+        "dotenv": "^16.3.1",
+        "node-telegram-bot-api": "^0.64.0"
+    }
+}
