@@ -9,7 +9,7 @@ import { fiveDayWeatherForCity } from "./src/routes/cityName/fiveDayWeatherForCi
 config();
 
 const { TG_BOT_ID } = process.env;
-// console.log(TG_BOT_ID);
+
 export const bot = new TelegramBot(TG_BOT_ID, {
   polling: true,
 });
