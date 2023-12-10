@@ -1,10 +1,8 @@
 import TelegramBot from "node-telegram-bot-api";
 import { config } from "dotenv";
-import { commands } from "./src/botCommands.mjs";
 import { startAction } from "./src/commandActions/start.mjs";
 import { backAction } from "./src/commandActions/start.mjs";
 import { getWeatherForecastByCity } from "./src/routes/cityName/currentWeatherForCity.mjs";
-import { fetchDataForLongTermByCityName } from "./controllers/name/getWeatherForLongTermByName.mjs";
 
 import { userLocation } from "./src/routes/locationUser/currentLocation.mjs";
 import { fiveDayWeatherForCity } from "./src/routes/cityName/fiveDayWeatherForCity.mjs";
