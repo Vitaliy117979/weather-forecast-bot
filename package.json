@@ -5,7 +5,7 @@
     "engines": {
         "node": ">=16.x"
       },
-    "main": "app.js",
+    "main": "app.mjs",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "cli": "node --no-warnings app.mjs",
