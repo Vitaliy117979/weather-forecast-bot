@@ -4,8 +4,8 @@ import { startAction } from "./src/commandActions/start.mjs";
 import { backAction } from "./src/commandActions/start.mjs";
 import { getWeatherForecastByCity } from "./src/routes/cityName/currentWeatherForCity.mjs";
 
-import { userLocation } from "./src/routes/locationUser/currentLocation.mjs";
 import { fiveDayWeatherForCity } from "./src/routes/cityName/fiveDayWeatherForCity.mjs";
+import { userLocation } from "./src/routes/locationUser/currentLocation.mjs";
 config();
 
 const { TG_BOT_ID } = process.env;
