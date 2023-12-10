@@ -2,7 +2,7 @@ import { fetchCurrentDataByUserCords } from "../../../controllers/location/getWe
 import { startAction } from "../../commandActions/start.mjs";
 import { initializeBot } from "../../../app.mjs";
 
- const userLocation = async (bot, location) => {
+export const userLocation = async (bot, location) => {
   const latitude = location.location.latitude;
   const longitude = location.location.longitude;
   try {
@@ -26,4 +26,3 @@ import { initializeBot } from "../../../app.mjs";
     );
   }
 };
-export default userLocation;
