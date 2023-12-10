@@ -3,9 +3,9 @@ import { startAction } from "../../commandActions/start.mjs";
 import { initializeBot } from "../../../app.mjs";
 
 export const userLocation = async (bot, location) => {
+  try {
   const latitude = location.location.latitude;
   const longitude = location.location.longitude;
-  try {
     const data = await fetchCurrentDataByUserCords(latitude, longitude);
     const temperature = data.main.temp;
     const humidity = data.main.humidity;
@@ -20,7 +20,7 @@ export const userLocation = async (bot, location) => {
     startAction(bot, location);
     initializeBot();
   } catch (error) {
-    return await bot.sendMessage(
+     await bot.sendMessage(
       location.chat.id,
       "Unknown error, please try again"
     );
