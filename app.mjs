@@ -5,7 +5,7 @@ import { backAction } from "./src/commandActions/start.mjs";
 import { getWeatherForecastByCity } from "./src/routes/cityName/currentWeatherForCity.mjs";
 
 import { fiveDayWeatherForCity } from "./src/routes/cityName/fiveDayWeatherForCity.mjs";
-import  {userLocation}  from "./src/routes/userLocation/currentLocation.mjs";
+import { userLocation } from "./src/routes/userLocation/currentLocation.mjs";
 config();
 
 const { TG_BOT_ID } = process.env;
@@ -14,7 +14,7 @@ export const bot = new TelegramBot(TG_BOT_ID, {
   polling: true,
 });
 
-bot.on("polling_error", (err) => console.log(err.data.error.message));
+bot.on("polling_error", (err) => console.log(err.data.message));
 
 export const initializeBot = () => {
   bot.on("text", async (msg) => {
@@ -36,13 +36,12 @@ export const initializeBot = () => {
         break;
     }
   });
-  
+
   bot.on("location", async (location) => {
     bot.removeAllListeners("text");
     bot.removeAllListeners("location");
 
     userLocation(bot, location);
-    
   });
 };
 initializeBot();
