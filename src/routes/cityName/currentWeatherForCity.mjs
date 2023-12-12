@@ -20,10 +20,12 @@ export const getWeatherForecastByCity = async (bot) => {
       const humidity = data.main.humidity;
       const weatherDescription = data.weather[0].description;
       const windSpeed = data.wind.speed;
-      const message = `Weather in the city ${msg.text}:
-      - <b>Description:</b>: ${weatherDescription}
-      - <b>Temperature:</b>: ${temperature}°C
-      - <b>Humidity:</b>: ${humidity}%
+      const name = msg.text.toLowerCase().charAt(0).toUpperCase() + msg.text.slice(1);
+      console.log(name);
+      const message = `Weather in the city <b>${name}</b>:
+      - <b>Description:</b> ${weatherDescription}
+      - <b>Temperature:</b> ${temperature}°C
+      - <b>Humidity:</b> ${humidity}%
       - <b>Wind speed:</b> ${windSpeed}m/s
       `;
 

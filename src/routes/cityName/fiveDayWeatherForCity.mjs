@@ -42,7 +42,7 @@ export const fiveDayWeatherForCity = async (bot) => {
         - <b>Description:</b> ${weatherDescription} ${getIcon}
         - <b>Temperature:</b> ${temp}°С
         - <b>Humidity:</b> ${humidity}%;
-        - <b>Wind speed: </b>  ${windSpeed}m/s`;
+        - <b>Wind speed:</b> ${windSpeed}m/s`;
       });
       const combinedMessage =
         `Weather forecast <b>${data.city.name}</b> :\n` + messages.join("\n");

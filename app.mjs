@@ -14,7 +14,7 @@ export const bot = new TelegramBot(TG_BOT_ID, {
   polling: true,
 });
 
-bot.on("polling_error", (err) => console.log(err.data.message));
+bot.on("polling_error", err => console.log("error"));
 
 export const initializeBot = () => {
   bot.on("text", async (msg) => {
