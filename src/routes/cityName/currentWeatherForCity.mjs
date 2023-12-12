@@ -6,7 +6,7 @@ import { getWeatherIcon } from "../../../controllers/icon/getIcon.mjs";
 export const getWeatherForecastByCity = async (bot) => {
   try {
     bot.on("text", async (msg) => {
-      if (msg.text === "back"||msg.text=== "/start") {
+      if (msg.text === "back"|| msg.text=== "/start") {
       
         bot.removeAllListeners("text");
         startAction(bot, msg);
