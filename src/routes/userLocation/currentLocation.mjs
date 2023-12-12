@@ -12,7 +12,7 @@ export const userLocation = async (bot, location) => {
     const humidity = data.main.humidity;
     const weatherDescription = data.weather[0].description;
     const windSpeed = data.wind.speed;
-    const getIcon = getWeatherIcon(item.weather[0].icon);
+    const getIcon = getWeatherIcon(data.weather[0].icon);
 
     const message = `Weather at your coordinates: longitude <b>${longitude}</b>, latitude <b>${latitude}</b>:
     - <b>Description:</b> ${weatherDescription} ${getIcon}

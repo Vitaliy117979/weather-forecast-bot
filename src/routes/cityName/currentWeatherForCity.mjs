@@ -21,7 +21,7 @@ export const getWeatherForecastByCity = async (bot) => {
       const humidity = data.main.humidity;
       const weatherDescription = data.weather[0].description;
       const windSpeed = data.wind.speed;
-      const getIcon = getWeatherIcon(item.weather[0].icon);
+      const getIcon = getWeatherIcon(data.weather[0].icon);
 
       const name = msg.text.toLowerCase().charAt(0).toUpperCase() + msg.text.slice(1);
       console.log(name);
