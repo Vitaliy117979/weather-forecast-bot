@@ -13,9 +13,9 @@ const { TG_BOT_ID } = process.env;
 export const bot = new TelegramBot(TG_BOT_ID, {
   polling: true,
 });
-
-bot.on("polling_error", err => console.log("error"));
-
+bot.on("polling_error", err => {
+  console.log("Error occurred:", err);
+});
 export const initializeBot = () => {
   bot.on("text", async (msg) => {
     const text = msg.text;
