@@ -6,7 +6,8 @@ import { getWeatherIcon } from "../../../controllers/icon/getIcon.mjs";
 export const getWeatherForecastByCity = async (bot) => {
   try {
     bot.on("text", async (msg) => {
-      if (msg.text === "back") {
+      if (msg.text === "back"||msg.text=== "/start") {
+      
         bot.removeAllListeners("text");
         startAction(bot, msg);
         initializeBot();
@@ -20,10 +21,12 @@ export const getWeatherForecastByCity = async (bot) => {
       const humidity = data.main.humidity;
       const weatherDescription = data.weather[0].description;
       const windSpeed = data.wind.speed;
+      const getIcon = getWeatherIcon(item.weather[0].icon);
+
       const name = msg.text.toLowerCase().charAt(0).toUpperCase() + msg.text.slice(1);
       console.log(name);
       const message = `Weather in the city <b>${name}</b>:
-      - <b>Description:</b> ${weatherDescription}
+      - <b>Description:</b> ${weatherDescription} ${getIcon}
       - <b>Temperature:</b> ${temperature}°C
       - <b>Humidity:</b> ${humidity}%
       - <b>Wind speed:</b> ${windSpeed}m/s

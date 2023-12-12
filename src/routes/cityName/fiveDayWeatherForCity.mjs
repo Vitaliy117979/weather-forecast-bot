@@ -18,7 +18,7 @@ const uniqueDates = (data) => {
 export const fiveDayWeatherForCity = async (bot) => {
   bot.on("text", async function foo(msg) {
     try {
-      if (msg.text === "back") {
+      if (msg.text === "back"||msg.text=== "/start") {
         bot.removeAllListeners("text");
         startAction(bot, msg);
         initializeBot();
