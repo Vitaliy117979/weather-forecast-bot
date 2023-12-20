@@ -1,7 +1,7 @@
-import { fetchDataForLongTermByCityName } from "../../../controllers/name/getWeatherForLongTermByName.mjs";
+import { fetchDataForLongTermByCityName } from "../../controllers/name/getWeatherForLongTermByName.mjs";
 import { startAction } from "../../commandActions/start.mjs";
-import { getWeatherIcon } from "../../../controllers/icon/getIcon.mjs";
-import { initializeBot } from "../../../app.mjs";
+import { getWeatherIcon } from "../../controllers/icon/getIcon.mjs";
+import { initializeBot } from "../../app.mjs";
 const uniqueDates = (data) => {
   return data.list.reduce((uniqueList, current) => {
     const dateTxt = current.dt_txt;

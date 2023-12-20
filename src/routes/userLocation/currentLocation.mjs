@@ -1,7 +1,7 @@
-import { fetchCurrentDataByUserCords } from "../../../controllers/location/getWeatherByLocation.mjs";
+import { fetchCurrentDataByUserCords } from "../../controllers/location/getWeatherByLocation.mjs";
 import { startAction } from "../../commandActions/start.mjs";
-import { initializeBot } from "../../../app.mjs";
-import { getWeatherIcon } from "../../../controllers/icon/getIcon.mjs";
+import { initializeBot } from "../../app.mjs";
+import { getWeatherIcon } from "../../controllers/icon/getIcon.mjs";
 
 export const userLocation = async (bot, location) => {
   try {

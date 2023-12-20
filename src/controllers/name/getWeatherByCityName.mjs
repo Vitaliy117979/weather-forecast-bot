@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { config } from "dotenv";
-import {geocodingByName} from "../geocoding/geocodingByName.mjs"
 config();
 
 const { API_KEY } = process.env;

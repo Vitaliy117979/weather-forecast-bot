@@ -1,7 +1,7 @@
-import { fetchDataByCityName } from "../../../controllers/name/getWeatherByCityName.mjs";
+import { fetchDataByCityName } from "../../controllers/name/getWeatherByCityName.mjs";
 import { startAction } from "../../commandActions/start.mjs";
-import { initializeBot } from "../../../app.mjs";
-import { getWeatherIcon } from "../../../controllers/icon/getIcon.mjs";
+import { initializeBot } from "../../app.mjs";
+import { getWeatherIcon } from "../../controllers/icon/getIcon.mjs";
 
 export const getWeatherForecastByCity = async (bot) => {
   try {

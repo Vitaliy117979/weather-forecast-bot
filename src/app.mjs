@@ -1,11 +1,11 @@
 import TelegramBot from "node-telegram-bot-api";
 import { config } from "dotenv";
-import { startAction } from "./src/commandActions/start.mjs";
-import { backAction } from "./src/commandActions/start.mjs";
-import { getWeatherForecastByCity } from "./src/routes/cityName/currentWeatherForCity.mjs";
+import { startAction } from "./commandActions/start.mjs";
+import { backAction } from "./commandActions/start.mjs";
+import { getWeatherForecastByCity } from "./routes/cityName/currentWeatherForCity.mjs";
 
-import { fiveDayWeatherForCity } from "./src/routes/cityName/fiveDayWeatherForCity.mjs";
-import { userLocation } from "./src/routes/userLocation/currentLocation.mjs";
+import { fiveDayWeatherForCity } from "./routes/cityName/fiveDayWeatherForCity.mjs";
+import { userLocation } from "./routes/userLocation/currentLocation.mjs";
 config();
 
 const { TG_BOT_ID } = process.env;

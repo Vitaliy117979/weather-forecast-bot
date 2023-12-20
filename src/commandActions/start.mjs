@@ -1,4 +1,4 @@
-import {initializeBot} from "../../app.mjs"
+import {initializeBot} from "../app.mjs"
 export const startAction = async (bot, msg) => {
   const message = "Select the desired option, or send your geolocation";
   await bot.sendMessage(msg.chat.id, message, {
